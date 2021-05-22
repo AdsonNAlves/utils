@@ -26,7 +26,7 @@ WORKDIR "/"
 
 RUN wget -q https://www.coppeliarobotics.com/files/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz
 RUN tar -xf CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz
-RUN  rm -rf CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz
+RUN rm -rf CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz
 
 RUN echo 'export QT_DEBUG_PLUGINS=1' >> ~/.bashrc
 RUN echo 'export PATH=/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04/:$PATH' >> ~/.bashrc
@@ -63,10 +63,6 @@ WORKDIR '/home/uav_sac/Drone_RL'
 RUN pip3 install -e .
 
 WORKDIR '/home/uav_sac/SAC_uav'
-
-COPY requirements.txt /home/
-
-WORKDIR '/home/'
 
 RUN pip3 install -r requirements.txt
 

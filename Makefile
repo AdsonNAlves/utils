@@ -1,4 +1,3 @@
-
 DOCKER=docker
 BASE_IMAGE_NAME=coppelia_pyrep_uav_sac
 BASE_DOCKERFILE=Dockerfile
